@@ -6,3 +6,4 @@
 
 1. [Задание 1: Основы React Native. Компоненты](https://github.com/atreidesdev/react-native-itis/tree/homework-1)
     - В этом задании реализовано использование различных компонентов.
+      ![экран](https://github.com/atreidesdev/react-native-itis/blob/homework-1/screen.png)
