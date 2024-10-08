@@ -4,8 +4,7 @@
 
 ## Домашние задания
 
-1. [Задание 1: Основы React Native. Компоненты](https://github.com/atreidesdev/react-native-itis/tree/homework-1)
-    - В этом задании реализовано использование различных компонентов.
-
 2. [Задание 2: Основы React Native. Компоненты](https://github.com/atreidesdev/react-native-itis/tree/homework-2)
    - В этом задании реализовано использование Button, TextInput. Создание своих компонентов и стилизация.
+   ![экран](https://github.com/atreidesdev/react-native-itis/blob/homework-2/Screenshot_1728402033.png)
+   ![экран](https://github.com/atreidesdev/react-native-itis/blob/homework-2/Screenshot_1728402054.png)
