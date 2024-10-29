@@ -7,4 +7,4 @@
 3. [Задание 3: Основы React Native. Навигация](https://github.com/atreidesdev/react-native-itis/tree/homework-3)
     - В этом задании реализовано использование навигации по 4 экранам и переход по стеку на отдельный экран.
 
-[Смотреть видео](hw2.webm)
+https://github.com/user-attachments/assets/08e9cc76-0f91-41c3-a64a-d0b1b77566cb
