@@ -13,5 +13,8 @@
 3. [Задание 3: Основы React Native. Навигация](https://github.com/atreidesdev/react-native-itis/tree/homework-3)
    - В этом задании реализовано использование навигации по 4 экранам и переход по стеку на отдельный экран.
 
-3. [Задание 4: Основы React Native. State Manager. Mobx](https://github.com/atreidesdev/react-native-itis/tree/homework-4)
-   - В этом задании реализован Todo-List с использованием Mobx
+4. [Задание 4: Основы React Native. State Manager. Mobx](https://github.com/atreidesdev/react-native-itis/tree/homework-4)
+   - В этом задании реализован Todo-List с использованием Mobx.
+
+5. [Задание 5: Основы React Native. Axios](https://github.com/atreidesdev/react-native-itis/tree/homework-5)
+   - В этом задании реализовано использование axios.
