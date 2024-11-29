@@ -4,8 +4,7 @@
 
 ## Домашние задания
 
-5. [Задание 5: Основы React Native. Axios](https://github.com/atreidesdev/react-native-itis/tree/homework-5)
-   - В этом задании реализовано использование axios. 
-   - API - https://shikimori.one/api/doc/1.0
+6. [Задание 6: Основы React Native. Async Storage](https://github.com/atreidesdev/react-native-itis/tree/homework-6)
+   - В этом задании реализовано использование Async Storage.
 
-https://github.com/user-attachments/assets/78924ee2-c369-40b6-8e0c-681ac761c2fa
+https://github.com/user-attachments/assets/cab11de8-7099-42ac-a316-d3d4d585e10f

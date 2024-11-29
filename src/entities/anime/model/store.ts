@@ -1,47 +1,34 @@
-import { makeAutoObservable } from 'mobx';
-import { AnimeType } from './types.ts';
-import { RootStore } from '../../../app/store.ts';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {makeAutoObservable, runInAction} from 'mobx';
+import {AnimeType} from './types.ts';
 
 export class AnimeStore {
-    rootStore: RootStore;
-    anime: AnimeType | null = {
-        id: 56243,
-        name: 'Jujutsu Kaisen 2nd Season',
-        score: '8.8',
-        status: 'released',
-        released_on: '2023-12-28',
-        image: {
-            original: '/system/animes/original/51009.jpg?1711334733',
-            preview: '/system/animes/preview/51009.jpg?1711334733',
-        },
-        genres: [
-            {
-                id: 1,
-                russian: 'Экшен',
-            },
-            {
-                id: 10,
-                russian: 'Фэнтези',
-            },
-            {
-                id: 23,
-                russian: 'Школа',
-            },
-            {
-                id: 27,
-                russian: 'Сёнен',
-            },
-        ],
-        description:
-            'Тридцать первое октября 2018 года, район Сибуя. Множество простых людей заключены под магической завесой и взяты в заложники союзом проклятых духов под началом [character=164481]Махито[/character] и [character=175542]Гэто[/character]. Всех гражданских обещают выпустить невредимыми только с одним условием: сильнейший маг современности [character=164471]Сатору Годзё[/character] должен явиться в Сибую и принять бой.\nУченики и преподаватели Магического техникума разбиваются на группы, чтобы быстрее эвакуировать мирных жителей перед началом масштабной битвы. Вместе с тем, сам Сатору Годзё прибывает на место действия и отправляется прямиком к станции. События развиваются согласно плану Сугуру Гэто.',
-    };
+  anime: AnimeType | null = null;
 
-    constructor(rootStore: RootStore) {
-        this.rootStore = rootStore;
-        makeAutoObservable(this);
-    }
+  constructor() {
+    makeAutoObservable(this);
+    this.initAnime();
+  }
 
-    setAnime(anime: AnimeType) {
-        this.anime = anime;
+  async initAnime() {
+    try {
+      const animeData = await AsyncStorage.getItem('last-anime');
+      if (animeData) {
+        const parsedAnime: AnimeType = JSON.parse(animeData);
+        runInAction(() => {
+          this.anime = parsedAnime;
+        });
+      }
+    } catch (error) {
+      console.error('Ошибка загрузки из хранилища:', error);
     }
+  }
+  setAnime(anime: AnimeType) {
+    this.anime = anime;
+    try {
+      AsyncStorage.setItem('last-anime', JSON.stringify(anime));
+    } catch (error) {
+      console.error('Ошибка сохранения в хранилище:', error);
+    }
+  }
 }
