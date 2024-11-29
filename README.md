@@ -18,3 +18,6 @@
 
 5. [Задание 5: Основы React Native. Axios](https://github.com/atreidesdev/react-native-itis/tree/homework-5)
    - В этом задании реализовано использование axios.
+
+6. [Задание 6: Основы React Native. Async Storage](https://github.com/atreidesdev/react-native-itis/tree/homework-6)
+   - В этом задании реализовано использование Async Storage.
