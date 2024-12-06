@@ -4,7 +4,7 @@
 
 ## Домашние задания
 
-4. [Задание 4: Основы React Native. State Manager. Mobx](https://github.com/atreidesdev/react-native-itis/tree/homework-4)
-   - В этом задании реализован Todo-List с использованием Mobx
+8. [Задание 8: Основы React Native. Modals](https://github.com/atreidesdev/react-native-itis/tree/homework-8)
+   - В этом задании реализовано использование модальных окон.
 
-https://github.com/user-attachments/assets/c7419c8a-6db2-4e60-9f4d-e71fbcd66716
+https://github.com/user-attachments/assets/d045766f-5339-4ba5-b0e3-32f909b8cf87

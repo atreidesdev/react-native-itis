@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
-import {CreateTodoScreen} from '../screens/CreateTodoScreen.tsx';
-import {CompletedTodoScreen} from '../screens/CompletedTodosScreen.tsx';
-import {PendingTodoScreen} from '../screens/PendingTodosScreen.tsx';
+import { CreateTodoScreen } from '../screens/CreateTodoScreen.tsx';
+import { PendingTodoScreen } from '../screens/PendingTodosScreen.tsx';
+import { CompletedTodoScreen } from '../screens/CompletedTodosScreen.tsx';
 
 
 const Tab = createBottomTabNavigator();
