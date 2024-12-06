@@ -21,3 +21,9 @@
 
 6. [Задание 6: Основы React Native. Async Storage](https://github.com/atreidesdev/react-native-itis/tree/homework-6)
    - В этом задании реализовано использование Async Storage.
+
+7. [Задание 7: Основы React Native. Deep Linking](https://github.com/atreidesdev/react-native-itis/tree/homework-7)
+   - В этом задании реализовано использование Deep Linking.
+
+8. [Задание 8: Основы React Native. Modals](https://github.com/atreidesdev/react-native-itis/tree/homework-8)
+   - В этом задании реализовано использование модальных окон.
