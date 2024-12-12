@@ -27,3 +27,6 @@
 
 8. [Задание 8: Основы React Native. Modals](https://github.com/atreidesdev/react-native-itis/tree/homework-8)
    - В этом задании реализовано использование модальных окон.
+
+9. [Задание 9: Основы React Native. Темизация](https://github.com/atreidesdev/react-native-itis/tree/homework-9)
+   - В этом задании реализовано использование разных тем.
