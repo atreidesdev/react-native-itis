@@ -1,14 +1,13 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {StoreContext, store} from './store.ts';
-import {TabNavigation} from '../navigation/TabNavigation.tsx';
-
-
+import React from 'react';
+import {TabNavigation} from '../navigation/TabNavigation';
+import {ThemeProvider} from '../shared/theme/model/provider.tsx';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <StoreContext.Provider value={store}>
+    <ThemeProvider>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
@@ -18,6 +17,6 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </StoreContext.Provider>
+    </ThemeProvider>
   );
 }
