@@ -1,0 +1,17 @@
+{
+  "themes": {
+    "light": "Light",
+    "dark": "Dark",
+    "ocean": "Ocean"
+  },
+  "language": {
+    "change": "Change Language"
+  },
+  "navigation": {
+    "settings": "Settings",
+    "content": "Content"
+  },
+  "text": {
+    "example": "Text"
+  }
+}

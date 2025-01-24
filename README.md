@@ -4,7 +4,7 @@
 
 ## Домашние задания
 
-9. [Задание 9: Основы React Native. Темизация](https://github.com/atreidesdev/react-native-itis/tree/homework-9)
-   - В этом задании реализовано использование разных тем.
+11. [Задание 11: Основы React Native. Локализация](https://github.com/atreidesdev/react-native-itis/tree/homework-11)
+   - В этом задании реализовано использование локализации на русский язык и английский.
 
 https://github.com/user-attachments/assets/6dba03d3-52ec-4943-b267-f54bee85011f

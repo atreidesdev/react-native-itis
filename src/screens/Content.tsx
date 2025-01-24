@@ -2,14 +2,16 @@ import {observer} from 'mobx-react';
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {useTheme} from '../shared/theme/model/hooks.ts';
+import {useTranslation} from 'react-i18next';
 
 export const Content = observer(() => {
   const {Colors} = useTheme();
+  const {t} = useTranslation();
   const styles = createStyles(Colors);
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Text</Text>
+      <Text style={styles.text}>{t('text.example')}</Text>
     </View>
   );
 });

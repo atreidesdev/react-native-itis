@@ -1,0 +1,17 @@
+{
+  "themes": {
+    "light": "Светлая",
+    "dark": "Темная",
+    "ocean": "Океан"
+  },
+  "language": {
+    "change": "Сменить язык"
+  },
+  "navigation": {
+    "settings": "Настройки",
+    "content": "Контент"
+  },
+  "text": {
+    "example": "Текст"
+  }
+}
