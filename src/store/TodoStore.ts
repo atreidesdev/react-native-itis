@@ -1,27 +1,52 @@
+import Realm from 'realm';
 import { makeAutoObservable, runInAction } from 'mobx';
+import { RealmClient } from './RealmClient';
 
+export const TodoTable = 'Todo';
 export type TodoStatus = 'выполняется' | 'выполнено';
 
-export type TodoType = {
-    id: number;
-    title: string;
-    status: TodoStatus;
-    createdAt: Date;
+class Todo {
+    id!: number;
+    title!: string;
+    status!: TodoStatus;
+    createdAt!: Date;
     completedAt?: Date;
+
+    static schema: Realm.ObjectSchema = {
+        name: 'Todo',
+        primaryKey: 'id',
+        properties: {
+            id: 'int',
+            title: 'string',
+            status: 'string',
+            createdAt: 'date',
+            completedAt: 'date?',
+        },
+    };
 }
 
-class TodoStore {
-    todos: TodoType[] = [];
+export class TodoStore {
+    todos: Todo[] = [];
     private lastId: number = 0;
 
     constructor() {
         makeAutoObservable(this);
+        this.loadTodos();
     }
 
-    private createTodo(title: string): TodoType {
-        this.lastId += 1;
+    private loadTodos() {
+        const todosFromDB = RealmClient.objects<Todo>(TodoTable);
+        runInAction(() => {
+            this.todos = Array.from(todosFromDB);
+            if (this.todos.length > 0) {
+                this.lastId = Math.max(...this.todos.map(todo => todo.id));
+            }
+        });
+    }
+
+    private createTodo(title: string): Partial<Todo> {
         return {
-            id: this.lastId,
+            id: (this.lastId += 1),
             title,
             status: 'выполняется' as TodoStatus,
             createdAt: new Date(),
@@ -29,26 +54,57 @@ class TodoStore {
     }
 
     addTodo(title: string) {
-        const newTodo: TodoType = this.createTodo(title);
-        runInAction(() => {
-            this.todos.push(newTodo);
+        const newTodo = this.createTodo(title);
+        RealmClient.write(() => {
+            const todo = RealmClient.create(TodoTable, newTodo) as Todo;
+            runInAction(() => {
+                this.todos.push(todo);
+            });
+        });
+    }
+
+    editTodo(id: number, newTitle: string) {
+        RealmClient.write(() => {
+            const targetTodo = RealmClient.objectForPrimaryKey(TodoTable, id) as Todo;
+            if (targetTodo) {
+                targetTodo.title = newTitle;
+                runInAction(() => {
+                    const index = this.todos.findIndex(todo => todo.id === id);
+                    if (index !== -1) {
+                        this.todos[index] = targetTodo;
+                    }
+                });
+            }
         });
     }
 
     deleteTodo(id: number) {
-        runInAction(() => {
-            this.todos = this.todos.filter(existingTodo => existingTodo.id !== id);
+        RealmClient.write(() => {
+            const todoToDelete = RealmClient.objectForPrimaryKey(TodoTable, id);
+            if (todoToDelete) {
+                runInAction(() => {
+                    this.todos = this.todos.filter(existingTodo => existingTodo.id !== id);
+                });
+
+                RealmClient.delete(todoToDelete);
+            }
         });
     }
 
     toggleTodo(id: number) {
-        const targetTodo = this.todos.find(existingTodo => existingTodo.id === id);
-        if (targetTodo) {
-            runInAction(() => {
+        RealmClient.write(() => {
+            const targetTodo = RealmClient.objectForPrimaryKey(TodoTable, id) as Todo;
+            if (targetTodo) {
                 targetTodo.status = targetTodo.status === 'выполняется' ? 'выполнено' : 'выполняется';
                 targetTodo.completedAt = targetTodo.status === 'выполнено' ? new Date() : undefined;
-            });
-        }
+                runInAction(() => {
+                    const index = this.todos.findIndex(todo => todo.id === id);
+                    if (index !== -1) {
+                        this.todos[index] = targetTodo;
+                    }
+                });
+            }
+        });
     }
 
     get pendingTodos() {

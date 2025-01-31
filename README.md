@@ -4,7 +4,7 @@
 
 ## Домашние задания
 
-8. [Задание 8: Основы React Native. Modals](https://github.com/atreidesdev/react-native-itis/tree/homework-8)
-   - В этом задании реализовано использование модальных окон.
+12. [Задание 12: Основы React Native. Realm](https://github.com/atreidesdev/react-native-itis/tree/homework-8)
+   - В этом задании реализовано использование realm.
 
-https://github.com/user-attachments/assets/d045766f-5339-4ba5-b0e3-32f909b8cf87
+https://github.com/user-attachments/assets/d4af3431-49f5-4d5c-a4f2-12140731e573
