@@ -32,7 +32,7 @@ export const TabNavigation = () => {
         component={Content}
         options={{
           headerShown: false,
-          tabBarIcon: getTabIcon('random'),
+          tabBarIcon: getTabIcon('snowflake-o'),
           title: t('navigation.content'),
         }}
       />

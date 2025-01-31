@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-ReactCourse-ReactCourseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReactCourse-ReactCourseTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		541E5B8AE4CE40DFAF111A4E /* Comforter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 014BDA2DBC58426496A0CD8F /* Comforter-Regular.ttf */; };
+		316053A3EB9F43498B3AAD53 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B245CF423C9A4361A8ED4509 /* Lobster-Regular.ttf */; };
+		E4A84478C7CA495D9B61083D /* MarckScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D6B002E363A451DA703802A /* MarckScript-Regular.ttf */; };
+		2B563E6D1F2B42AFB9129B6C /* Pangolin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EFA49F3235D49008DEFD4BF /* Pangolin-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactCourse/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReactCourse-ReactCourseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactCourse-ReactCourseTests.release.xcconfig"; path = "Target Support Files/Pods-ReactCourse-ReactCourseTests/Pods-ReactCourse-ReactCourseTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		014BDA2DBC58426496A0CD8F /* Comforter-Regular.ttf */ = {isa = PBXFileReference; name = "Comforter-Regular.ttf"; path = "../src/assets/fonts/Comforter-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B245CF423C9A4361A8ED4509 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; name = "Lobster-Regular.ttf"; path = "../src/assets/fonts/Lobster-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5D6B002E363A451DA703802A /* MarckScript-Regular.ttf */ = {isa = PBXFileReference; name = "MarckScript-Regular.ttf"; path = "../src/assets/fonts/MarckScript-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7EFA49F3235D49008DEFD4BF /* Pangolin-Regular.ttf */ = {isa = PBXFileReference; name = "Pangolin-Regular.ttf"; path = "../src/assets/fonts/Pangolin-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				51FB1B6669844B51B6042EEB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +158,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		51FB1B6669844B51B6042EEB /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				014BDA2DBC58426496A0CD8F /* Comforter-Regular.ttf */,
+				B245CF423C9A4361A8ED4509 /* Lobster-Regular.ttf */,
+				5D6B002E363A451DA703802A /* MarckScript-Regular.ttf */,
+				7EFA49F3235D49008DEFD4BF /* Pangolin-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +266,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				541E5B8AE4CE40DFAF111A4E /* Comforter-Regular.ttf in Resources */,
+				316053A3EB9F43498B3AAD53 /* Lobster-Regular.ttf in Resources */,
+				E4A84478C7CA495D9B61083D /* MarckScript-Regular.ttf in Resources */,
+				2B563E6D1F2B42AFB9129B6C /* Pangolin-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

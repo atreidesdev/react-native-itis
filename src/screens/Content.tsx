@@ -24,10 +24,13 @@ const createStyles = (Colors: any) =>
       alignItems: 'center',
       padding: 16,
       backgroundColor: Colors.background,
+
+
     },
     text: {
-      fontSize: 18,
-      fontWeight: 'bold',
+      fontSize: 50,
+      fontWeight: '400',
       color: Colors.textPrimary,
+      fontFamily: 'Triodion-Regular',
     },
   });

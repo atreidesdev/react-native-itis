@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Comforter-Regular.ttf",
+      "sha1": "9728d077f4277b159f00c71ecb76528f40737aaa"
+    },
+    {
+      "path": "src/assets/fonts/Lobster-Regular.ttf",
+      "sha1": "120c751cd7a77174037c2409ab883ef7efc5edbb"
+    },
+    {
+      "path": "src/assets/fonts/MarckScript-Regular.ttf",
+      "sha1": "254431c73407e4cd8f02055223ed812d20a99414"
+    },
+    {
+      "path": "src/assets/fonts/Pangolin-Regular.ttf",
+      "sha1": "b6797b46dbb518370e4d91bdc6df5cddf48825ba"
+    },
+    {
+      "path": "src/assets/fonts/Triodion-Regular.ttf",
+      "sha1": "c2d97b81004c332cbd97eddd70430363c1fd897c"
+    }
+  ]
+}
