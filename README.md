@@ -30,3 +30,12 @@
 
 9. [Задание 9: Основы React Native. Темизация](https://github.com/atreidesdev/react-native-itis/tree/homework-9)
    - В этом задании реализовано использование разных тем.
+
+10. [Задание 10: Основы React Native. Шрифты и иконки](https://github.com/atreidesdev/react-native-itis/tree/homework-11)
+   - В этом задании реализовано использование кастомных шрифтов и иконок.
+
+11. [Задание 11: Основы React Native. Локализация](https://github.com/atreidesdev/react-native-itis/tree/homework-11)
+   - В этом задании реализовано использование локализации на русский язык и английский.
+
+12. [Задание 12: Основы React Native. Realm](https://github.com/atreidesdev/react-native-itis/tree/homework-8)
+   - В этом задании реализовано использование realm.
